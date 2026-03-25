@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "VerdictFX",
-  "version": "1.0",
-  "description": "Plays a success video when your solution gets accepted on LeetCode and GeeksForGeeks.",
+  "version": "1.1",
+  "description": "Plays success video and failure sound for LeetCode & GFG submissions.",
   "permissions": ["activeTab", "scripting"],
   "content_scripts": [
     {
@@ -18,7 +18,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["success.mp4"],
+      "resources": ["success.mp4", "failure.mp3"],
       "matches": ["<all_urls>"]
     }
   ]
