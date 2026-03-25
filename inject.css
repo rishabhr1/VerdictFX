@@ -1,0 +1,51 @@
+#success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999;
+}
+
+/* Container for video + close button */
+#success-container {
+    position: relative;
+}
+
+/* Close Button */
+#success-close-btn {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: white;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999999999;
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+#success-close-btn:hover {
+    background: #e5e5e5;
+}
+
+/* Video (keep natural size but reduce max) */
+#success-video {
+    width: auto;
+    height: auto;
+    max-width: 50vw;     /* reduced significantly */
+    max-height: 50vh;    /* reduced significantly */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.6);
+}

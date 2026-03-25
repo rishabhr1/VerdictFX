@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "VerdictFX",
+  "version": "1.0",
+  "description": "Plays a success video when your solution gets accepted on LeetCode and GeeksForGeeks.",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://leetcode.com/*",
+        "https://practice.geeksforgeeks.org/*",
+        "https://www.geeksforgeeks.org/problems/*",
+        "https://geeksforgeeks.org/problems/*"
+      ],
+      "js": ["content.js"],
+      "css": ["inject.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["success.mp4"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
